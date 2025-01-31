@@ -63,7 +63,7 @@ chas = st.sidebar.selectbox('Faz limite com o rio?', ('Sim', 'Não'))
 #Transformando dados de entrada em binário
 chas = 1 if chas == "Sim" else 0
 nox = st.sidebar.number_input('Concentração de oxico nitrico', value=data.NOX.mean())
-rm = st.sidebar.number_input('Núero de quartos', value=1)
+rm = st.sidebar.number_input('Número de quartos', value=1)
 pratio = st.sidebar.number_input('Índice de alunos por professores', value=data.PTRATIO.mean())
 
 #Botão que realiza predição
