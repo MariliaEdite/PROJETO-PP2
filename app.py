@@ -53,11 +53,11 @@ f = px.histogram(dados, x='MEDV', nbins=100, title='Distribuição de Preços')
 f.update_xaxes(title='MEDV')
 f.update_yaxes(title='Total imóveis')
 st.plotly_chart(f)
-st.sidebar.subheader('Defina os atributos dos imoveis para predição')
+st.sidebar.subheader('Defina os atributos dos imóveis para predição')
 
 #Mapeando os dados do usuário para cada um dos atributos
-crim = st.sidebar.number_input('Taxa de criminalidade', value=data.CRIM.mean())
-indus = st.sidebar.number_input("Proporção de hectares de Industrias", value=data.INDUS.mean())
+crim = st.sidebar.number_input('Taxa de Criminalidade', value=data.CRIM.mean())
+indus = st.sidebar.number_input("Proporção de Hectares de Industrias", value=data.INDUS.mean())
 chas = st.sidebar.selectbox('Faz limite com o rio?', ('Sim', 'Não'))
 
 #Transformando dados de entrada em binário
@@ -67,7 +67,7 @@ rm = st.sidebar.number_input('Número de quartos', value=1)
 pratio = st.sidebar.number_input('Índice de alunos por professores', value=data.PTRATIO.mean())
 
 #Botão que realiza predição
-btn_predict = st.sidebar.button('Realizar predição')
+btn_predict = st.sidebar.button('Realizar Predição')
 
 #Verificar acionamento do botão
 if btn_predict:
